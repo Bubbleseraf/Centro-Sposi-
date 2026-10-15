@@ -1,16 +1,18 @@
 import { getCategoryLabel } from '../data/products.js'
 
 function ProductVisual({ product, compact = false }) {
+  const displayImage = compact ? product.thumbnail ?? product.image : product.image
+
   return (
-    <div className={`product-visual product-visual-${product.category}${compact ? ' product-visual-compact' : ''}${product.image ? ' has-image' : ''}`}>
-      {product.image ? (
+    <div className={`product-visual product-visual-${product.category}${compact ? ' product-visual-compact' : ''}${displayImage ? ' has-image' : ''}`}>
+      {displayImage ? (
         <img
           className="product-visual-image"
-          src={product.image}
+          src={displayImage}
           alt={product.name}
           loading={compact ? 'lazy' : 'eager'}
           fetchPriority={compact ? 'auto' : 'high'}
-          style={{ objectPosition: product.imagePosition ?? 'center' }}
+          style={{ objectPosition: compact ? 'center' : product.imagePosition ?? 'center' }}
         />
       ) : (
         <>

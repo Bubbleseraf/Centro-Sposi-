@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import ceremonyMan from '../media/catalogo/uomo/cardHome.jpg'
-import ceremonyWoman from '../media/catalogo/donna/cardHomeDonna.jpg'
+import ceremonyMan from '../media/catalogo/uomo/cardHome.webp'
+import ceremonyWoman from '../media/catalogo/donna/cardHomeDonna.webp'
 import './CeremonyCards.css'
 
 const collections = [
