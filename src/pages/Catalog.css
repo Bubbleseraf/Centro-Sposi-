@@ -146,7 +146,12 @@
 
   .product-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
     row-gap: 2.5rem;
+  }
+
+  .product-grid .product-card {
+    width: min(100%, 24rem);
   }
 }
 
