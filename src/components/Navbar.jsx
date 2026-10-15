@@ -1,14 +1,17 @@
 import { Link, NavLink } from 'react-router-dom'
+import { useCart } from '../context/useCart.js'
 import './Navbar.css'
 
 const navItems = [
   { label: 'Home', to: '/', end: true },
   { label: 'Chi siamo', to: '/chi-siamo' },
-  { label: 'Collezioni', to: '/#collezioni' },
+  { label: 'Catalogo', to: '/catalogo' },
   { label: 'Contatti', to: '/contatti' },
 ]
 
 function Navbar() {
+  const { itemCount } = useCart()
+
   return (
     <header className="site-header">
       <nav className="navbar navbar-expand-lg navbar-light" aria-label="Navigazione principale">
@@ -48,6 +51,11 @@ function Navbar() {
               ))}
               <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
                 <Link className="btn btn-gold-outline" to="/contatti#prenota">Prenota una prova</Link>
+              </li>
+              <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
+                <Link className="cart-nav-link" to="/carrello">
+                  Carrello <span aria-label={`${itemCount} articoli nel carrello`}>{itemCount}</span>
+                </Link>
               </li>
             </ul>
           </div>

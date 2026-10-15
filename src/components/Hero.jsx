@@ -54,7 +54,7 @@ function Hero() {
                 per accompagnarti verso il tuo giorno più bello.
               </p>
               <div className="hero-actions d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
-                <a className="btn btn-gold" href="#collezioni">Scopri le collezioni</a>
+                <Link className="btn btn-gold" to="/catalogo">Scopri il catalogo</Link>
                 <Link className="hero-text-link" to="/contatti#prenota">
                   Prenota un appuntamento <span aria-hidden="true">→</span>
                 </Link>

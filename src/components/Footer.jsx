@@ -20,7 +20,7 @@ function Footer() {
             <nav className="d-flex flex-column align-items-start gap-2" aria-label="Navigazione footer">
               <Link to="/">Home</Link>
               <Link to="/chi-siamo">Chi siamo</Link>
-              <Link to="/#collezioni">Collezioni</Link>
+              <Link to="/catalogo">Catalogo</Link>
               <Link to="/contatti">Contatti</Link>
             </nav>
           </div>

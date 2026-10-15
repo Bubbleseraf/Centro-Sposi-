@@ -41,6 +41,26 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+select {
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+select:hover {
+  border-color: var(--color-gold) !important;
+}
+
+select:focus,
+select:focus-visible {
+  border-color: var(--color-gold-dark) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(197, 163, 90, 0.2) !important;
+}
+
+select option:checked {
+  color: var(--color-black);
+  background: var(--color-gold-light);
+}
+
 ::selection {
   color: var(--color-black);
   background: var(--color-gold-light);

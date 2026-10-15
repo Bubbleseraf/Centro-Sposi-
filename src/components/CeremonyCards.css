@@ -31,6 +31,17 @@
   max-width: 72rem;
 }
 
+.ceremony-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ceremony-card-link:focus-visible {
+  outline: 2px solid var(--color-gold-dark);
+  outline-offset: 0.35rem;
+}
+
 .ceremony-card {
   position: relative;
   min-height: clamp(27rem, 42vw, 38rem);
